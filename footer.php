@@ -10,7 +10,6 @@
 
 
 <footer class="aa_footer">
-	<p>This is the footer.</p>
 </footer>
 <!-- /.aa_footer -->
 

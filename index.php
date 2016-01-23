@@ -1,31 +1,19 @@
 <?php
 /**
- * The blog page.
- *
- * @package Neat
+ * Homepage
  */
+get_header();
 
-get_header(); ?>
+    // Context array.
+	$context = array();
 
+	// Dynamic message.
+	$var = 'Dynamic Message';
 
-	<div class="aa_wrap">
+	// Dynamic data.
+	$context['the_message'] = $var;
 
-		<?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
+	// Render twig file with the give $context array.
+	Timber::render( 'welcome.twig', $context );
 
-					<?php get_template_part( 'assets/views/content' ) ?>
-
-				<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'assets/views/content', 'none' ); ?>
-
-		<?php endif; ?>
-
-	</div>
-	<!-- /.aa_wrap -->
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+get_footer();
