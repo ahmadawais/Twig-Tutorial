@@ -27,7 +27,8 @@ Neat is distributed under the terms of the GNU GPL v2 or later.
 html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
 
 /** Remove default margin. */
-body { margin: 0; }
+body { margin: 0; padding: 5rem; }
+body h2 { font-size: 3rem; }
 
 /* HTML5 display definitions ========================================================================== */
 /** Correct `block` display not defined for any HTML5 element in IE 8/9. Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox. Correct `block` display not defined for `main` in IE 11. */
