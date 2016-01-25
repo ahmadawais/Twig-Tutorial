@@ -74,11 +74,16 @@ endif; // neat_setup
 add_action( 'after_setup_theme', 'neat_setup' );
 
 
-// Stylesheet.
-wp_enqueue_style(
-    'twig_styles',
-    TWIG_THEME_URL . '/style.css',
-    array(),
-    '1.0.0',
-    'all'
-);
+/**
+ * Frontend stylesheet.
+ */
+if ( ! is_admin() ) {
+	// Stylesheet.
+	wp_enqueue_style(
+	    'twig_styles',
+	    TWIG_THEME_URL . '/style.css',
+	    array(),
+	    '1.0.0',
+	    'all'
+	);
+}
