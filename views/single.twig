@@ -5,7 +5,17 @@
 {% block content %}
 
     <div class="single_content">
+
+    	<img src="{{ post.thumbnail.src }}" />
+
+    	{# <img src="{{ post.thumbnail.src | resize ( 900, 500 ) }}" /> #}
+
+    	{# <img src="{{ post.thumbnail.src | resize ( 900 ) }}" /> #}
+
+    	{# <img src="{{ custom_img }}" /> #}
+
         <h1>{{ post.title }}</h1>
+
         <p>{{ post.get_content }}</p>
     </div>
 
