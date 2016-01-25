@@ -2,18 +2,12 @@
 /**
  * Homepage
  */
-get_header();
 
-    // Context array.
-	$context = array();
+// Context array.
+$context = array();
 
-	// Dynamic message.
-	$var = 'Dynamic Message';
+// Add the page ID which is 4 in my case.
+$context[ 'welcome_page' ] = Timber::get_post( 4 );
 
-	// Dynamic data.
-	$context['the_message'] = $var;
-
-	// Render twig file with the give $context array.
-	Timber::render( 'welcome.twig', $context );
-
-get_footer();
+// Timber render().
+Timber::render( 'welcome.twig', $context );

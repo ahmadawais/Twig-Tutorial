@@ -1,4 +1,8 @@
-<!-- Message Template -->
+{# Message Template: `welcome.twig` #}
 <section class="message">
-        <h2>{{ the_message }}</h2>
+        {# <pre>
+        	<code>{{ welcome_page | print_r }}</code>
+        </pre> #}
+        <h2>{{ welcome_page.title }}</h2>
+        <p>{{ welcome_page.content }}</p>
 </section>

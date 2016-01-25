@@ -9,7 +9,7 @@
 
 // Context array
 $context         = Timber::get_context();
-$post            = Timber::get_posts();
+$post            = Timber::query_post();
 $context['post'] = $post;
 
 // Timber ender().

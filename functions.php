@@ -87,3 +87,20 @@ if ( ! is_admin() ) {
 	    'all'
 	);
 }
+
+
+/**
+ * Custom Context
+ *
+ * Context data for Timber::get_context() function.
+ *
+ * @since 1.0.0
+ */
+function add_to_context( $data ) {
+	$data['foo'] = 'bar';
+	$data['stuff'] = 'I am a value set in your functions.php file';
+	$data['notes'] = 'These values are available everytime you call Timber::get_context();';
+	$data['menu'] = new TimberMenu();
+	return $data;
+}
+add_filter( 'timber_context', 'add_to_context' );
