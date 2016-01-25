@@ -1,19 +1,10 @@
 <?php
-/**
- * Neat functions and definitions
- *
- * @package Neat
- */
 
 /**
- *
  * Paths
- *
- * @since  1.0
- *
  */
 if ( !defined( 'AA_THEME_DIR' ) ){
-    define('AA_THEME_DIR', ABSPATH . 'wp-content/themes/' . get_template());
+    define( 'AA_THEME_DIR', ABSPATH . 'wp-content/themes/' . get_template() );
 }
 
 
@@ -79,3 +70,11 @@ endif; // neat_setup
 add_action( 'after_setup_theme', 'neat_setup' );
 
 
+// Stylesheet.
+wp_enqueue_style(
+    'twig_styles',
+    AA_THEME_DIR . '/style.css',
+    array(),
+    '1.0.0',
+    'all'
+);
