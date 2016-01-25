@@ -1,0 +1,12 @@
+{# Sinlge Template: `single.twig` #}
+
+{% extends "base.twig" %}
+
+{% block content %}
+
+    <div class="single_content">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.get_content }}</p>
+    </div>
+
+{% endblock %}
