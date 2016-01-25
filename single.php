@@ -16,5 +16,8 @@ $context['post'] = $post;
 // to retrieve the image via its ID i.e 8
 $context['custom_img'] = new TimberImage( 8 );
 
+// Get the user object.
+$context['user'] = new TimberUser();
+
 // Timber ender().
 Timber::render( 'single.twig', $context );
