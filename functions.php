@@ -3,8 +3,12 @@
 /**
  * Paths
  */
-if ( !defined( 'AA_THEME_DIR' ) ){
-    define( 'AA_THEME_DIR', ABSPATH . 'wp-content/themes/' . get_template() );
+if ( !defined( 'TWIG_THEME_DIR' ) ){
+    define( 'TWIG_THEME_DIR', ABSPATH . 'wp-content/themes/' . get_template() );
+}
+
+if ( !defined( 'TWIG_THEME_URL' ) ){
+    define( 'TWIG_THEME_URL', get_template_directory_uri() );
 }
 
 
@@ -73,7 +77,7 @@ add_action( 'after_setup_theme', 'neat_setup' );
 // Stylesheet.
 wp_enqueue_style(
     'twig_styles',
-    AA_THEME_DIR . '/style.css',
+    TWIG_THEME_URL . '/style.css',
     array(),
     '1.0.0',
     'all'
