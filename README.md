@@ -4,4 +4,4 @@ Install the [Timber](https://wordpress.org/plugins/timber-library/) library to u
 ## Tutorial Branches
 - Tutorial #2 Getting Started [here](https://github.com/ahmadawais/Twig-Tutorial/tree/Getting-Started)
 - Tutorial #3 WordPress Cheatsheet [here](https://github.com/ahmadawais/Twig-Tutorial/tree/WPCheatsheet)
-- Tutorial #4 TimberImages & TimberMenu
+- Tutorial #4 TimberImages, TimberMenu & TimberUser [her](https://github.com/ahmadawais/Twig-Tutorial/tree/ImagesMenusUsers)
