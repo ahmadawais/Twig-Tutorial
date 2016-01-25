@@ -1,20 +1,11 @@
 <?php
 /**
- * The template for displaying the footer.
- *
- * Contains the closing of the #content div and all content after
+ * Footer Template
  */
-?>
 
 
-<footer class="aa_footer">
+// Context array
+$context = Timber::get_context();
 
-<!-- Footer content -->
-
-</footer>
-<!-- /.aa_footer -->
-
-<?php wp_footer(); ?>
-
-</body>
-</html>
+// Timber ender().
+Timber::render( 'footer.twig', $context );
